@@ -1,4 +1,4 @@
-package com.example.handtohand.ui.slideshow;
+package com.example.handtohand.ui.reg;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,29 +12,29 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.handtohand.R;
-import com.example.handtohand.databinding.FragmentSlideshowBinding;
+import com.example.handtohand.databinding.FragmentRegBinding;
+import com.example.handtohand.ui.reg.RegViewModel;
 
-public class SlideshowFragment extends Fragment {
+public class RegFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
-    private FragmentSlideshowBinding binding;
+    private RegViewModel regViewModel;
+    private FragmentRegBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        regViewModel =
+                new ViewModelProvider(this).get(RegViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentRegBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+       /* final TextView textView = binding.textReg;
+        regViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 

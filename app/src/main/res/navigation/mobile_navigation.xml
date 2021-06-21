@@ -12,14 +12,21 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.handtohand.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.handtohand.ui.slideshow.SlideshowFragment"
+        android:name="com.example.handtohand.ui.nedv.NedvFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_nedv" />
+    <fragment
+        android:id="@+id/nav_auto"
+        android:name="com.example.handtohand.ui.auto.AutoFragment"
+        android:label="fragment_auto"
+        tools:layout="@layout/fragment_auto" />
+    <fragment
+        android:id="@+id/nav_reg"
+        android:name="com.example.handtohand.ui.reg.RegFragment"
+        android:label="RegFragment" />
+    <fragment
+        android:id="@+id/nav_enter"
+        android:name="com.example.handtohand.ui.enter.EnterFragment"
+        android:label="EnterFragment" />
 </navigation>
